@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Título principal -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/activity_data_protection"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Subtítulo -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Información de Protección de Datos"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="12dp" />
+
+    <!-- 🔐 Mensaje visual si la sesión está bloqueada -->
+    <TextView
+        android:id="@+id/tvAuthMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="🔒 Sesión bloqueada. Autenticación requerida."
+        android:textColor="@android:color/holo_red_dark"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:visibility="gone"
+        android:padding="12dp"
+        android:layout_marginBottom="12dp"
+        android:background="@android:color/transparent" />
+
+    <!-- Contenido con scroll: info + logs -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Información general -->
+            <TextView
+                android:id="@+id/tvDataProtectionInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cargando información de protección..."
+                android:textSize="14sp"
+                android:padding="12dp"
+                android:background="@android:color/darker_gray"
+                android:textColor="@android:color/white"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Título de logs -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Logs de Acceso"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Logs -->
+            <TextView
+                android:id="@+id/tvAccessLogs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cargando logs..."
+                android:textSize="12sp"
+                android:padding="12dp"
+                android:background="@android:color/darker_gray"
+                android:textColor="@android:color/white"
+                android:fontFamily="monospace" />
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Botones para logs y limpieza -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp">
+
+        <Button
+            android:id="@+id/btnViewLogs"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/btn_view_logs"
+            android:layout_marginEnd="8dp" />
+
+        <Button
+            android:id="@+id/btnClearData"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/btn_clear_data"
+            android:layout_marginStart="8dp" />
+    </LinearLayout>
+
+    <!-- 🔐 Botones de seguridad avanzada -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="8dp">
+
+        <Button
+            android:id="@+id/btnGuardarSeguro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Guardar Token Seguro"
+            android:layout_marginBottom="8dp" />
+
+        <Button
+            android:id="@+id/btnVerificarIntegridad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Verificar Integridad"
+            android:layout_marginBottom="8dp" />
+
+        <Button
+            android:id="@+id/btnRotarClave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Rotar Clave Maestra"
+            android:layout_marginBottom="8dp" />
+
+        <!-- 🧪 Botón adicional: Simular Evento Sospechoso -->
+        <Button
+            android:id="@+id/btnSimulateThreat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Simular Evento Sospechoso"
+            android:backgroundTint="@android:color/holo_red_dark"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+</LinearLayout>
