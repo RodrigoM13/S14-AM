@@ -99,6 +99,4 @@ Implementado en `AdvancedAnonymizer.kt`:
 
 ---
 
-Desarrollado por: **Rodrigo M.**  
-Asistido por: [ChatGPT, OpenAI]  
-Fecha de última actualización: `Agosto 2025`
+Lasimosamente no pude adjuntar por problemas del emulador de android studio y no me detectaba mi celular tampoco
